@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Zebomba games test</title>
+  </head>
+  <body>
+    <div
+      class="game"
+      id="app"
+    >
+      <canvas
+        class="game__canvas game__canvas--track"
+        id="game-path"
+        width="980"
+        height="630"
+      >
+      </canvas>
+      <canvas
+        class="game__canvas game__canvas--player"
+        id="player"
+        width="980"
+        height="630"
+      >
+      </canvas>
+      <nav class="game__nav">
+        <div class="players">
+          <button
+            class="players__button players__button--prev"
+            type="button"
+            disabled
+          >
+            Назад
+          </button>
+          <div class="players__wrapper">
+            <ul class="players__list"></ul>
+          </div>
+          <button
+            class="players__button players__button--next"
+            type="button"
+          >
+            Вперед
+          </button>
+        </div>
+        <button
+          class="button button--icon chat-button"
+          type="button"
+        >
+          <span class="button__text">Чат</span>
+        </button>
+        <button
+          class="button button--accent play-button"
+          type="button"
+        >
+          <span class="button__text">В универ</span>
+        </button>
+        <button
+          class="button button--icon mail-button"
+          type="button"
+        >
+          <img
+            src="./src/assets/mail-icon.png"
+            alt="Входящие"
+            width="50"
+          >
+        </button>
+        <button
+          class="button button--icon rates-button"
+          type="button"
+        >
+          <img
+            src="./src/assets/rates-icon.png"
+            alt="Рейтинг"
+            width="56"
+          >
+        </button>
+      </nav>
+      <div class="game-step"></div>
+      <dialog class="rates-popup" open>
+        <button
+          class="rates-popup__close-button"
+          type="button"
+        >
+          Закрыть
+        </button>
+        <h2 class="rates-popup__title">Рейтинг игроков</h2>
+        <div class="rates-popup__table-wrapper">
+          <table class="table rates-popup__table">
+            <thead class="table__header">
+              <tr class="table__row player">
+                <th class="table__head player__place">Место</th>
+                <th class="table__head player__name">Имя Фамилия</th>
+                <th class="table__head player__points">Опыт</th>
+              </tr>
+            </thead>
+            <tbody class="rates-popup__table-content"></tbody>
+          </table>
+        </div>
+      </dialog>
+      <div class="overlay"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/players-slider.js"></script>
+    <script type="module" src="/src/game.js"></script>
+  </body>
+</html>

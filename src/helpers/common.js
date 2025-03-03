@@ -1,0 +1,7 @@
+export const randomNumberFromInterval = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+export const disableButton = (button, disabled) => {
+  button.disabled = disabled;
+};
